@@ -142,7 +142,7 @@ const Hero = () => {
                     <div className="absolute inset-[-5px] rounded-full box-glow animate-pulse"></div>
                     <div className="w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden border-4 border-[#0a0f1b] relative z-10 bg-black">
                         <img
-                            src="/main_pic.jpg"
+                            src={`${import.meta.env.BASE_URL}main_pic.jpg`}
                             alt="Pavan Kumar Killana"
                             className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                             onError={(e) => {

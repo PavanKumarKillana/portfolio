@@ -21,7 +21,7 @@ const About = () => {
                         <div className="glass-card p-4 relative w-full max-w-md group">
                             <div className="absolute inset-0 bg-gradient-to-tr from-[#00d2ff]/20 to-[#9d00ff]/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl blur-xl"></div>
                             <img
-                                src="/about_me_pic.jpg"
+                                src={`${import.meta.env.BASE_URL}about_me_pic.jpg`}
                                 alt="Pavan Kumar Killana"
                                 className="w-full rounded-xl object-cover h-[450px] relative z-10"
                             />
