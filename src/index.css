@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&display=swap');
+@import url('https://api.fontshare.com/v2/css?f[]=satoshi@900,700,500,300,400&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-neon-cyan: #00d2ff;
+  --color-neon-magenta: #9d00ff;
+  --color-deep-navy: #0a0f1b;
+  --font-satoshi: 'Satoshi', sans-serif;
+  --font-syne: 'Syne', sans-serif;
+}
+
+@layer base {
+  body {
+    background-color: var(--color-deep-navy);
+    color: white;
+    font-family: var(--font-satoshi);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-syne);
+  }
+}
+
+@layer utilities {
+  .text-glow-cyan {
+    text-shadow: 0 0 10px rgba(0, 210, 255, 0.7), 0 0 20px rgba(0, 210, 255, 0.5);
+  }
+
+  .box-glow {
+    box-shadow: -10px -10px 30px rgba(0, 210, 255, 0.4),
+      10px 10px 30px rgba(157, 0, 255, 0.4);
+  }
+
+  .glass-card {
+    @apply bg-white/5 backdrop-blur-lg border border-white/10 rounded-2xl;
+  }
+}
+
+/* Base resets for lenis */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
+}
